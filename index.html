@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Responsive Image Gallery</h1>
+        <p>Hover over images for effect. Click to enlarge.</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="Image1.jpeg" alt="One" onclick="openLightbox('Image1.jpeg', 'One')">
+            <img src="Image2.jpeg" alt="Two" onclick="openLightbox('Image2.jpeg', 'Two')">
+            <img src="Image3.jpeg" alt="Three" onclick="openLightbox('Image3.jpeg', 'Three')">
+            <img src="Image4.jpeg" alt="Four" onclick="openLightbox('Image4.jpeg', 'Four')">
+            <img src="Image5.jpeg" alt="Five" onclick="openLightbox('Image5.jpeg', 'Five')">
+            <img src="Image6.jpeg" alt="Six" onclick="openLightbox('Image6.jpeg', 'Six')">
+        </div>
+        <div class="column">
+            <img src="Image7.jpeg" alt="Seven" onclick="openLightbox('Image7.jpeg', 'Seven')">
+            <img src="Image8.jpeg" alt="Eight" onclick="openLightbox('Image8.jpeg', 'Eight')">
+            <img src="Image9.jpeg" alt="Nine" onclick="openLightbox('Image9.jpeg', 'Nine')">
+            <img src="Image10.jpeg" alt="Ten" onclick="openLightbox('Image10.jpeg', 'Ten')">
+            <img src="Image11.jpeg" alt="Eleven" onclick="openLightbox('Image11.jpeg', 'Eleven')">
+            <img src="Image12.jpeg" alt="Twelve" onclick="openLightbox('Image12.jpeg', 'Twelve')">
+        </div>
+        <div class="column">
+            <img src="Image13.jpeg" alt="A" onclick="openLightbox('Image13.jpeg', 'A')">
+            <img src="Image14.jpeg" alt="B" onclick="openLightbox('Image14.jpeg', 'B')">
+            <img src="Image15.jpeg" alt="C" onclick="openLightbox('Image15.jpeg', 'C')">
+            <img src="Image16.jpeg" alt="D" onclick="openLightbox('Image16.jpeg', 'D')">
+            <img src="Image17.jpeg" alt="E" onclick="openLightbox('Image17.jpeg', 'E')">
+            <img src="Image18.jpeg" alt="F" onclick="openLightbox('Image18.jpeg', 'F')">
+        </div>
+        <div class="column">
+            <img src="Image19.jpeg" alt="A" onclick="openLightbox('Image19.jpeg', 'G')">
+            <img src="Image20.jpeg" alt="B" onclick="openLightbox('Image20.jpeg', 'H')">
+            <img src="Image21.jpeg" alt="C" onclick="openLightbox('Image21.jpeg', 'I')">
+            <img src="Image22.jpeg" alt="D" onclick="openLightbox('Image22.jpeg', 'J')">
+            <img src="Image23.jpeg" alt="E" onclick="openLightbox('Image23.jpeg', 'K')">
+            <img src="Image24.jpeg" alt="F" onclick="openLightbox('Image24.jpeg', 'L')">
+        </div>
+    </div>
+
+    <div id="myModal" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="img01">
+    </div>
+
+    <script>
+        function openLightbox(imageSrc, altText) {
+            var modal = document.getElementById("myModal");
+            var img = document.getElementById("img01");
+            img.src = imageSrc;
+            img.alt = altText;
+            modal.style.display = "block";
+        }
+
+        function closeLightbox() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
